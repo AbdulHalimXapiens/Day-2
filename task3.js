@@ -5,19 +5,20 @@ let minimal = Math.min.apply(Math, nilai);
 let median = Math.floor(nilai.length / 2);
 nilai = [...nilai].sort((a, b) => a - b);
 if (nilai.length % 2 !== 0) {
-    console.log("Nilai Tengah : ", nilai[median]);
+  console.log("Nilai Tengah : ", nilai[median]);
 } else {
-    console.log("Nilai Tengah : ", parseFloat((nilai[median - 1] + nilai[median]) / 2));
+  console.log(
+    "Nilai Tengah : ",
+    parseFloat((nilai[median - 1] + nilai[median]) / 2)
+  );
 }
 
 let num = 0;
 let jmlNum = nilai.length;
 for (let i = 0; i < nilai.length; i++) {
-    
-    num += nilai[i];
+  num += nilai[i];
 }
-
 
 console.log("Max : ", maximal);
 console.log("Min : ", minimal);
-console.log("Min : ", num / jmlNum);
+console.log("Median : ", num / jmlNum);

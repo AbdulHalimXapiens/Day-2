@@ -9,11 +9,23 @@
 
 <body>
     <script>
-        function leapYear(year) {
-            return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+        let tahun = prompt("Masukkan Tahun :");
+        if ((tahun%4)===0){
+        if ((tahun%100)!==0){
+            alert(tahun + ' adalah tahun kabisat');
         }
-
-        leapYear(prompt("Masukan Tahun"));
+        else {
+            if((tahun%400)===0) {
+            alert(tahun + ' adalah tahun kabisat');
+            }
+            else {
+            alert(tahun + 'adalah bukan tahun kabisat');
+            }
+        }
+        }
+        else {
+        alert(tahun + ' adalah bukan tahun kabisat');
+        }
     </script>
 </body>
 
